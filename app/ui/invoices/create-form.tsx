@@ -14,6 +14,7 @@ import { createInvoice, State } from '@/app/lib/actions';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState: State = { message: null, errors: {} };
+  // @ts-ignore
   const [state, formAction] = useActionState(createInvoice, initialState);
 
   return (
